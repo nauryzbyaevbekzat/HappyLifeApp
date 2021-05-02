@@ -1,0 +1,81 @@
+﻿@model IEnumerable<HappyLife.Models.Record>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<br>
+
+<h3>Uncompleted work</h3>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+          
+            <td>Label</td>
+            <td></td>
+           
+            <td>IN</td>
+            <td></td>
+            <td>OUT</td>
+            <td></td>
+           
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model.Where(p => p.InWork == false))
+    {
+        <tbody>
+            <tr class="table-primary">
+               
+                <td>@item.Description</td>
+                <td></td>
+                
+                <td>@item.Start</td>
+                <td></td>
+                <td>@item.End</td>
+                <td></td>
+                
+     
+            </tr>
+        </tbody>
+    }
+</table>
+<br>
+<h3>Сompleted work</h3>
+<br>
+<table class="table table-striped">
+<thead>
+    <tr class="table-primary">
+       
+        <td>Label</td>
+        <td></td>
+        
+        <td>IN</td>
+        <td></td>
+        <td>OUT</td>
+        
+        <td></td>
+        <td></td>
+
+    </tr>
+</thead>
+
+@foreach (var item in Model.Where(p => p.InWork == true))
+{
+    <tbody>
+        <tr class="table-primary">
+           
+            <td>@item.Description</td>
+          
+            <td></td>
+            <td>@item.Start</td>
+            <td></td>
+            <td>@item.End</td>
+            
+            <td></td>
+            <td></td>
+
+        </tr>
+    </tbody>
+}
+</table>

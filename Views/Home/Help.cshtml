@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HappyLife.Models.Accesemp>
+@{
+    ViewData["Title"] = "Help acces";
+}
+<br>
+<h3>Give acces </h3>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+            <td>User Id </td>
+            <td></td>
+            <td>Email</td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+
+
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr class="table-primary">
+                <td>@item.UserId</td>
+                <td></td>
+                <td>@item.Email</td>
+                <td></td>
+                <td></td>
+
+                <td><a href="~/Home/Getofwork/@item.UserId">Get of work</a></td>
+
+
+
+
+
+
+            </tr>
+        </tbody>
+    }
+</table>

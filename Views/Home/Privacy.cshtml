@@ -1,0 +1,90 @@
+﻿@model IEnumerable<HappyLife.Models.Record>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<br>
+<form asp-action="Privacy" asp-controller="Home" method="post" enctype="multipart/form-data">
+    
+
+    <p>
+        <input type="submit" value="Start work" class="alert-primary" />
+    </p>
+</form>
+<br>
+<h3>The works that I do </h3>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+          
+            <td>Label</td>
+            <td></td>
+           
+            <td>IN</td>
+            <td></td>
+            <td>OUT</td>
+            <td></td>
+            <td></td>
+            
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model.Where(p => p.InWork == false))
+    {
+        <tbody>
+            <tr class="table-primary">
+               
+                <td>@item.Description</td>
+                <td></td>
+                
+                <td>@item.Start</td>
+                <td></td>
+                <td>@item.End</td>
+                <td></td>
+                
+                <td><a href="~/Home/Edit/@item.RecordId">Stop work</a></td>
+
+            </tr>
+        </tbody>
+    }
+</table>
+<br>
+<h3>Works that I have completed</h3>
+<br>
+<table class="table table-striped">
+<thead>
+    <tr class="table-primary">
+       
+        <td>Label</td>
+        <td></td>
+        
+        <td>IN</td>
+        <td></td>
+        <td>OUT</td>
+        
+        <td></td>
+        <td></td>
+
+    </tr>
+</thead>
+
+@foreach (var item in Model.Where(p => p.InWork == true))
+{
+    <tbody>
+        <tr class="table-primary">
+           
+            <td>@item.Description</td>
+          
+            <td></td>
+            <td>@item.Start</td>
+            <td></td>
+            <td>@item.End</td>
+            
+            <td></td>
+            <td></td>
+
+        </tr>
+    </tbody>
+}
+</table>

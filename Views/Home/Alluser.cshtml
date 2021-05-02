@@ -1,0 +1,52 @@
+﻿@model IEnumerable<HappyLife.Models.User>
+@{
+    ViewData["Title"] = "Acces";
+}
+<br>
+<h3>All user </h3>
+<br>
+<h3>Staff arrival and departure schedule</h3>
+<img src="~/img/11.png"  >
+<img src="~/img/22.png" >
+
+<br>
+<h3></h3>
+<table class="table table-striped">
+    <thead>
+        <tr class="table-primary">
+            <td>UserId</td>
+            <td></td>
+            <td>Name</td>
+            <td></td>
+
+            <td>Surname</td>
+            <td></td>
+            <td>Email</td>
+            <td></td>
+            <td>See the graph</td>
+
+
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr class="table-primary">
+                <td>@item.UserId</td>
+                <td></td>
+                <td>@item.Name</td>
+                <td></td>
+
+                <td>@item.Surname</td>
+                <td></td>
+                <td>@item.Email</td>
+                <td></td>
+
+                <td><a href="~/Home/See/@item.UserId">See the graph</a></td>
+
+            </tr>
+        </tbody>
+    }
+</table>
+

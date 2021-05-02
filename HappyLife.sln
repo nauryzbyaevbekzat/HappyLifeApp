@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HappyLife", "HappyLife.csproj", "{BE15AA31-B016-48BB-ACCF-70E82F947DB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE15AA31-B016-48BB-ACCF-70E82F947DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE15AA31-B016-48BB-ACCF-70E82F947DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE15AA31-B016-48BB-ACCF-70E82F947DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE15AA31-B016-48BB-ACCF-70E82F947DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAE6FC3E-A31D-46F6-8C39-9D3FA3EDF2D4}
+	EndGlobalSection
+EndGlobal

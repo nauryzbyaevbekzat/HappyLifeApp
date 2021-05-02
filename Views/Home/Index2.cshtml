@@ -1,0 +1,36 @@
+﻿@model IEnumerable<HappyLife.Models.User>
+@{
+
+
+    ViewData["Title"] = "Home Page";
+}
+
+
+@foreach (var item in Model.Where(p => p.Email == User.Identity.Name))
+{
+    <h5 >
+        Hello,  @item.Name !
+    </h5>
+   
+}
+<br>
+<h5>See profile information bellow</h5>
+<br>
+@foreach (var item in Model.Where(p => p.Email == User.Identity.Name))
+{
+
+    
+    <div class="alert alert-primary" role="alert">
+        Email : @item.Email
+    </div>
+    <div class="alert alert-primary" role="alert">
+        Name : @item.Name
+    </div>
+    <div class="alert alert-primary" role="alert">
+        Surname : @item.Surname
+    </div>
+   
+
+
+}
+

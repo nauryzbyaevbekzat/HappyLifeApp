@@ -1,0 +1,24 @@
+﻿@model HappyLife.Models.Record
+@{
+    ViewBag.Title = "Permission";
+}
+<h3>Permission</h3>
+<h4>When did you miss work ?</h4>
+
+
+<form asp-action="Permission" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Description" class="control-label">Reason:</label>
+        <input type="text" asp-for="Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input class="form-control" asp-for="Start" asp-format="{0:yyyy-MM-ddTHH:mm}" />
+
+    </div>
+    
+    
+
+    <div class="form-group">
+        <input type="submit" value="submit" class="btn btn-default alert-primary" />
+    </div>
+</form>
